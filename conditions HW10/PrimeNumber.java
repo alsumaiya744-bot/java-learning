@@ -14,13 +14,13 @@ class PrimeNumber
 		{
 			System.out.print("it is a prime number");
 		}
-		else if((num%2!=0)||(num%3!=0)||(num%5!=0)||(num%7!=0))
+		else if((num%2==0)||(num%3==0)||(num%5==0)||(num%7==0))
 		{
-			System.out.print("it is a prime number");
+			System.out.print("it is not a prime number");
 		}
 		else
 		{
-			System.out.print("not a prime number");
+			System.out.print("it is a prime number");
 		}
 	}
 }
