@@ -1,11 +1,11 @@
 import java.util.Scanner;
-class EmployeeName
+class StudentName
 {
 	public static void main(String[] args)
 	{
 		Scanner obj=new Scanner(System.in);
 		Scanner obj1=new Scanner(System.in);
-		System.out.print("enter the total number of employees :");
+		System.out.print("enter the total number of students :");
 		int num=obj.nextInt();
 		String name[]=new String[num];
 		int index=0;
@@ -26,7 +26,11 @@ class EmployeeName
 					{
 					System.out.print("enter the name of student"+" "+(index+1)+" :");
 					name[index]=obj1.nextLine();
-					index++
+					index++;
+					}
+					else
+					{
+						System.out.println("you entered data more than given length");
 					}
 					break;
 			case 2:
