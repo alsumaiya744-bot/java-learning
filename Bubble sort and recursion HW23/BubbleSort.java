@@ -3,10 +3,10 @@ class BubbleSort
 {
 	int bubbleSort(int arr[])
 	{
-		int j=0;
-		for(int i=0;i<arr.length;i++)
+		int i=0;
+		for(i=0;i<arr.length-1;i++)
 		{
-			for(j=0;j<arr.length-1;j++)
+			for(int j=0;j<arr.length-1;j++)
 			{
 				if(arr[j]>arr[j+1])
 				{
@@ -17,7 +17,7 @@ class BubbleSort
 			}
 		}
 		printArr(arr);
-		return j;	
+		return i;	
 	}
 	void printArr(int arr[])
 	{
