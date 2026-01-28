@@ -3,16 +3,17 @@ import java.util.Arrays;
 class SearchAndSort
 {
 	Scanner obj=new Scanner(System.in);
-	int[] enterElement()
+	int index=0;
+	int[] enterElement(int arr[])
 	{
-		System.out.print("enter the length :");
-		int len=obj.nextInt();
-		int newArr[]=new int[len];
-		for(int i=0;i<newArr.length;i++)
+		int newArr[]=new int[index+1];
+		for(int i=0;i<arr.length;i++)
 		{
-			System.out.print("enter the element "+(i+1)+" :");
-			newArr[i]=obj.nextInt();
+			newArr[i]=arr[i];
 		}
+		System.out.print("enter the element "+(index+1)+" :");
+		newArr[index]=obj.nextInt();
+		index++;
 		return newArr;
 	}
 	void display(int arr[],int i)
@@ -142,9 +143,10 @@ class SearchAndSort
 			switch(choice)
 			{
 				case 1:
-					arr=enterElement();
+					arr=enterElement(arr);
 					break;
 				case 2:
+					System.out.println("******** Element in Array ********");
 					display(arr,0);
 					break;
 				case 3:
