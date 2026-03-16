@@ -1,0 +1,421 @@
+							SYSTEM ANALYST DESIGN
+							
+					Fish Supply Chain Management System
+					
+1. LOGIN SCREEN
+Used by: Owner / Workers / Admin
+Purpose: Authenticate users before accessing the system.
+
+1. Data Fields
+2. User ID
+3. Password
+4. Fingerprint ID (for workers)
+5. User Role (Admin / Owner / Worker)
+
+FUNCTIONS
+
+1. loginUser()
+2. verifyFingerprint()
+3. validateUserCredentials()
+4. logoutUser()
+
+CLASS NAME
+
+LoginManager
+
+
+2. HOME DASHBOARD SCREEN
+Used by: Owner / Manager
+Purpose: Display overall business performance.
+
+DATA FIELDS
+
+1. Total Fish Purchased (Today)
+2. Total Fish Sold (Today)
+3. Total Expenses
+4. Total Income
+5. Net Profit / Loss
+6. Number of Orders
+7. Delivery Status
+8. Dashboard Elements
+9. Profit vs Expense Pie Chart
+10. Daily Sales Bar Chart
+11. Low Stock Alert
+
+FUNCTIONS
+
+1. loadDashboardData()
+2. calculateProfitLoss()
+3. generateSalesChart()
+4. showLowStockAlert()
+
+CLASS NAME
+
+DashboardController
+
+
+3. SUPPLIER MANAGEMENT SCREEN
+Used by: Owner / Store Keeper
+Purpose: Manage fishermen suppliers.
+
+DATA FIELDS
+
+1. Supplier ID
+2. Fisherman Name
+3. Phone Number
+4. Fishing Location
+5. Fish Type Supplied
+6. Payment Status
+FUNCTIONS
+
+addSupplier()
+updateSupplier()
+deleteSupplier()
+viewSupplierDetails()
+CLASS NAME
+
+SupplierManager
+
+
+4. FISH PURCHASE SCREEN
+Used by: Owner / Store Keeper
+Purpose: Record fish purchased from fishermen.
+
+DATA FIELDS
+
+Purchase ID
+Supplier ID
+Fish Type
+Quantity (Cages / Kg)
+Weight
+Unit Price
+Total Price
+Payment Method
+Purchase Date
+Storage Location
+FUNCTIONS
+
+createPurchase()
+calculateTotalPrice()
+savePurchaseRecord()
+updateInventoryStock()
+CLASS NAME
+
+PurchaseManager
+
+
+5. INVENTORY / FISH STOCK SCREEN
+Used by: Store Keeper
+Purpose: Track fish availability in storage.
+
+DATA FIELDS
+
+Fish ID
+Fish Name
+Quantity Available
+Storage Location
+Minimum Stock Level
+Last Updated Date
+Stock Status
+FUNCTIONS
+
+viewStock()
+updateStockQuantity()
+deleteStockItem()
+checkLowStockLevel()
+CLASS NAME
+
+InventoryManager
+
+
+6. CUSTOMER MANAGEMENT SCREEN
+Used by: Sales Staff / Owner
+Purpose: Manage customers (export companies / retailers).
+
+DATA FIELDS
+
+Customer ID
+Company Name
+Contact Person
+Phone Number
+Delivery Location
+Payment Terms
+FUNCTIONS
+
+addCustomer()
+updateCustomer()
+deleteCustomer()
+viewCustomerOrders()
+CLASS NAME
+
+CustomerManager
+
+
+7. CUSTOMER SALES SCREEN
+Used by: Sales Staff / Owner
+Purpose: Record fish sales orders.
+
+DATA FIELDS
+
+Order ID
+Customer ID
+Fish Type
+Quantity Ordered
+Price per Unit
+Total Price
+Order Date
+Delivery Location
+Order Status
+FUNCTIONS
+
+createSalesOrder()
+calculateOrderTotal()
+generateInvoice()
+sendOrderToDelivery()
+CLASS NAME
+
+SalesManager
+
+8. VEHICLE MANAGEMENT SCREEN
+Used by: Logistics Manager
+Purpose: Manage delivery vehicles.
+
+DATA FIELDS
+
+Vehicle ID
+Vehicle Number
+Driver Name
+Fuel Type
+Capacity
+Vehicle Status
+FUNCTIONS
+
+addVehicle()
+updateVehicle()
+assignVehicle()
+viewVehicleDetails()
+CLASS NAME
+
+VehicleManager
+
+
+9. LOGISTICS / DELIVERY SCREEN
+Used by: Delivery Manager / Delivery Man
+Purpose: Manage fish deliveries.
+
+DATA FIELDS
+
+Delivery ID
+Order ID
+Vehicle ID
+Delivery Person
+Delivery Location
+Dispatch Time
+Delivery Time
+Delivery Status
+FUNCTIONS
+
+assignDelivery()
+updateDeliveryStatus()
+trackDeliveryLocation()
+confirmDelivery()
+CLASS NAME
+
+DeliveryManager
+
+10. ICE SUPPLY SCREEN
+Used by: Store Keeper
+Purpose: Record ice purchases for fish preservation.
+
+DATA FIELDS
+
+Ice Supply ID
+Supplier Name
+Quantity Supplied
+Delivery Date
+Storage Usage
+Cost
+FUNCTIONS
+
+addIceSupply()
+updateIceStock()
+calculateIceExpense()
+CLASS NAME
+
+IceSupplyManager
+
+
+11. WATER SUPPLY SCREEN
+Used by: Store Keeper
+Purpose: Record water cans used by workers.
+
+DATA FIELDS
+Supply ID
+Supplier Name
+Number of Water Cans
+Cost
+Date
+FUNCTIONS
+
+recordWaterSupply()
+updateWaterStock()
+calculateWaterExpense()
+CLASS NAME
+
+WaterSupplyManager
+
+
+12. WORKER / LABOR SCREEN
+Used by: Admin
+Purpose: Manage worker details and attendance.
+
+DATA FIELDS
+
+Worker ID
+Worker Name
+Job Role
+Fingerprint ID
+Attendance
+Salary
+FUNCTIONS
+
+registerWorker()
+scanFingerprint()
+markAttendance()
+calculateSalary()
+CLASS NAME
+
+WorkerManager
+
+
+13. FINANCE DASHBOARD SCREEN
+Used by: Owner / Accountant
+Purpose: Monitor financial performance.
+
+DATA FIELDS
+
+Total Sales
+Total Expenses
+Net Profit / Loss
+Monthly Revenue
+Pending Payments
+FUNCTIONS
+
+calculateTotalSales()
+calculateTotalExpenses()
+calculateProfitLoss()
+generateFinancialSummary()
+CLASS NAME
+
+FinanceManager
+
+
+14. EXPENSE ENTRY SCREEN
+Used by: Accountant / Owner
+Purpose: Record all business expenses.
+
+DATA FIELDS
+
+Expense ID
+Expense Type
+Amount
+Paid To
+Date
+Notes
+FUNCTIONS
+
+addExpense()
+updateExpense()
+deleteExpense()
+calculateTotalExpenses()
+CLASS NAME
+
+ExpenseManager
+
+
+EXPENSE SUB SCREEN
+ELECTRICITY BILL SCREEN
+
+addElectricityBill()
+updateElectricityBill()
+deleteElectricityBill()
+CLASS: ElectricityExpenseManager
+
+WATER EXPENSE SCREEN
+
+addWaterExpense()
+updateWaterExpense()
+deleteWaterExpense()
+CLASS: WaterExpenseManager
+
+ICE EXPENSE SCREEN
+
+addIceExpense()
+updateIceExpense()
+deleteIceExpense()
+CLASS: IceExpenseManager
+
+FUEL EXPENSE SCREEN
+
+addFuelExpense()
+updateFuelExpense()
+deleteFuelExpense()
+CLASS: FuelExpenseManager
+
+WORKER SALARY SCREEN
+
+addSalaryPayment()
+updateSalaryPayment()
+deleteSalaryRecord()
+CLASS: SalaryManager
+
+OTHER EXPENSE SCREEN
+
+addOtherExpense()
+updateOtherExpense()
+deleteOtherExpense()
+CLASS: OtherExpenseManager
+
+
+15. REPORT SCREEN
+Used by: Owner / Manager
+Purpose: Generate business reports.
+
+REPORTS AVAILABLE
+
+Sales Report
+Purchase Report
+Expense Report
+Delivery Report
+Profit / Loss Report
+FUNCTIONS
+
+generateSalesReport()
+generatePurchaseReport()
+generateExpenseReport()
+generateDeliveryReport()
+generateProfitLossReport()
+printReport()
+exportPDF()
+exportExcel()
+
+CLASS NAME
+
+ReportManager
+
+16. NOTIFICATION / ALERT SCREEN
+Purpose: Show important business alerts.
+
+ALERTS
+
+Low fish stock
+Pending deliveries
+Pending payments
+High expenses
+FUNCTIONS
+
+generateAlert()
+viewNotifications()
+CLASS NAME
+
+NotificationManager					
