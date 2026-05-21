@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="582.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SalesManagement.SalesManagementController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="764.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/WhatsApp%20Image%202026-03-23%20at%2010.24.27%20AM.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="Fish Supply Chain Management">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="180.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/material-symbols--home-rounded.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#btnHome" text="Home">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="28.0" fitWidth="42.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/ic--baseline-account-circle.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAccount" prefHeight="21.0" prefWidth="133.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <Label text="Sales Management">
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="291.0" prefWidth="704.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="21.0" prefWidth="134.0" text="Create Sales Order">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="215.0" prefWidth="510.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="137.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="398.0" minWidth="10.0" prefWidth="373.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label text="Order ID : " GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="11.0" text="Customer Name : " GridPane.rowIndex="2">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="31.0" text="Fish Type : " GridPane.rowIndex="3">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="51.0" text="Quantity : " GridPane.rowIndex="4">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="62.0" text="Price Per Unit : " GridPane.rowIndex="5">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label layoutX="15.0" layoutY="80.0" text="Total Price : " GridPane.rowIndex="6">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <TextField fx:id="txtPricePerUnit" layoutX="147.0" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Spinner fx:id="spnQuantity" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="txtOrderId" layoutX="147.0" layoutY="123.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label text="Date : " GridPane.rowIndex="7">
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="dpDate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label fx:id="lblTotalPrice" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <ComboBox fx:id="cmbFishType" layoutX="147.0" layoutY="171.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <ComboBox fx:id="cmbCustomerID" layoutX="147.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" GridPane.columnIndex="1" />
+                        <Label layoutX="15.0" layoutY="40.0" text="Customer ID : ">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets left="5.0" />
+                           </GridPane.margin>
+                        </Label>
+                        <Label fx:id="lblCustomerName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="191.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                     </children>
+                  </GridPane>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="659.0">
+                     <VBox.margin>
+                        <Insets left="20.0" top="1.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnCreateOrder" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #2563EB; -fx-background-radius: 10;" text="Create Order" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnUpdate" prefWidth="120.0" style="-fx-background-color: #5FD85F; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnDelete" prefWidth="120.0" style="-fx-background-color: #EB2525; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnGenerateInvoice" style="-fx-background-color: #5FD85F; -fx-background-radius: 10;" text="Generate Invoice" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="185.0" prefWidth="745.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Order List">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblOrder" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="162.0" prefWidth="745.0">
+                    <columns>
+                      <TableColumn fx:id="colOrderID" text="Order ID" />
+                      <TableColumn fx:id="colCustomerName" prefWidth="96.0" text="Customer Name" />
+                        <TableColumn fx:id="colFishType" text="Fish Type" />
+                        <TableColumn fx:id="colQuantity" prefWidth="82.0" text="Quantity" />
+                        <TableColumn fx:id="colPricePerUnit" prefWidth="82.0" text="Price Per Unit" />
+                        <TableColumn fx:id="colTotalPrice" text="Total Price" />
+                        <TableColumn fx:id="colOrderDate" text="Order Date" />
+                        <TableColumn fx:id="colDeliveryStatus" text="Status" />
+                        <TableColumn fx:id="colInvoiceStatus" prefWidth="83.0" text="Invoice Status" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="6.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

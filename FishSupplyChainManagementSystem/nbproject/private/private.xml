@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/fishsupplychainmanagementsystem/FishSupplyChainManagementSystem.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/fishsupplychainmanagementsystem/LoginController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/deliveryandvehiclemanagement/DeliveryAndVehicleManagementController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/deliveryandvehiclemanagement/DeliveryAndVehicleManagement.fxml</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/workermanagement/WorkerManagement.fxml</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/workermanagement/WorkerManagementController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/expensemanagement/ExpenseManagementController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/expensemanagement/ExpenseManagement.fxml</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/financemanagement/FinanceManagement.fxml</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/financemanagement/FinanceManagementController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/createaccount/CreateAccountController.java</file>
+            <file>file:/E:/Project/FishSupplyChainManagementSystem/src/createaccount/CreateAccount.fxml</file>
+        </group>
+    </open-files>
+</project-private>

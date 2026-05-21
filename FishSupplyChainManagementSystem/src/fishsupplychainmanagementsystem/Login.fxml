@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fishsupplychainmanagementsystem.LoginController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <Label fx:id="message" prefHeight="32.0" prefWidth="256.0">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Label>
+            <ImageView fitHeight="123.0" fitWidth="178.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);">
+               <image>
+                  <Image url="@WhatsApp%20Image%202026-03-23%20at%2010.24.27%20AM.jpeg" />
+               </image>
+               <VBox.margin>
+                  <Insets top="110.0" />
+               </VBox.margin>
+            </ImageView>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: white;" HBox.hgrow="NEVER">
+         <children>
+            <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="380.0" prefWidth="250.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: black; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);" VBox.vgrow="NEVER">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="59.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@mingcute--user-4-fill.png" />
+                     </image>
+                  </ImageView>
+                  <Label text="Login" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="80.0" left="40.0" right="40.0" top="30.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="183.0" prefWidth="250.0" StackPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="userName" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Enter User Name" style="-fx-border-color: black;" />
+                              <PasswordField fx:id="password" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" promptText="Enter Password" style="-fx-border-color: black;" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </PasswordField>
+                              <ComboBox fx:id="role" maxHeight="-Infinity" maxWidth="-Infinity" prefWidth="150.0" promptText="Select Role" style="-fx-border-color: black;">
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </ComboBox>
+                              <Button mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #2563EB; -fx-background-radius: 100;" text="Login" textFill="WHITE">
+                                 <VBox.margin>
+                                    <Insets top="8.0" />
+                                 </VBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="83.0" layoutY="116.0" mnemonicParsing="false" onAction="#reset" prefHeight="25.0" prefWidth="105.0" style="-fx-background-color: #2563EB; -fx-background-radius: 100;" text="Reset" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets top="5.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Hyperlink maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#createAccount" prefHeight="23.0" prefWidth="100.0" text="Create Account ?">
+                                 <VBox.margin>
+                                    <Insets left="5.0" top="3.0" />
+                                 </VBox.margin>
+                              </Hyperlink>
+                           </children>
+                           <StackPane.margin>
+                              <Insets bottom="10.0" />
+                           </StackPane.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="50.0" />
+                     </VBox.margin>
+                  </StackPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>

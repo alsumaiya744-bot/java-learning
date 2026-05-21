@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerManagement.CustomerManagementController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="764.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/WhatsApp%20Image%202026-03-23%20at%2010.24.27%20AM.jpeg" />
+               </image>
+            </ImageView>
+            <Label text="Fish Supply Chain Management">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="180.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/material-symbols--home-rounded.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#btnHome" text="Home">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="28.0" fitWidth="42.0" layoutX="450.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/ic--baseline-account-circle.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAccount" prefHeight="21.0" prefWidth="133.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="224.0" text="Customer Management">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="15.0" top="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="434.0" prefWidth="249.0" style="-fx-background-color: white; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Add / Update Customer">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label text="Customer ID">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCustomerId" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="157.0">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Contact Person">
+                     <VBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtContactPerson" layoutX="15.0" layoutY="64.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="157.0">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label text="Company Name">
+                     <VBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="AreaCompanyName" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="216.0">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </TextArea>
+                  <Label text="Phone Number">
+                     <VBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtPhoneNumber" layoutX="15.0" layoutY="110.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="157.0">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="15.0" layoutY="220.0" text="Location">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbLocation" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="158.0" promptText="Select Location">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <Label layoutX="15.0" layoutY="269.0" text="Payment Terms">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="5.0" top="4.0" />
+                     </VBox.margin>
+                  </Label>
+                  <ComboBox fx:id="cmbPaymentTerms" layoutX="15.0" layoutY="289.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="158.0" promptText="Select Terms">
+                     <VBox.margin>
+                        <Insets left="5.0" top="1.0" />
+                     </VBox.margin>
+                  </ComboBox>
+                  <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="249.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#btnAdd" prefHeight="30.0" prefWidth="63.0" style="-fx-background-color: #2563EB; -fx-background-radius: 10;" text="Add" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnUpdate" style="-fx-background-color: #5FD85F; -fx-background-radius: 10;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#btnDelete" style="-fx-background-color: #EB2525; -fx-background-radius: 10;" text="Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="5.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="423.0" prefWidth="488.0" style="-fx-background-color: white;">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Customer List">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblCustomer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="488.0">
+                    <columns>
+                      <TableColumn fx:id="colCustomerID" prefWidth="77.0" text="Customer ID" />
+                      <TableColumn fx:id="colContactPerson" prefWidth="90.0" text="Contact Person" />
+                        <TableColumn fx:id="colCompanyName" prefWidth="95.0" text="Company Name" />
+                        <TableColumn fx:id="colPhoneNo" prefWidth="75.0" text="Phone No" />
+                        <TableColumn fx:id="colLocation" prefWidth="75.0" text="Location" />
+                        <TableColumn fx:id="colPayTerms" prefWidth="75.0" text="Pay Terms" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="40.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

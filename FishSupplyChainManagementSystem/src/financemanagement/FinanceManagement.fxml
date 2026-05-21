@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="764.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="financemanagement.FinanceManagementController">
+   <children>
+      <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="764.0" style="-fx-background-color: white;">
+         <children>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/WhatsApp%20Image%202026-03-23%20at%2010.24.27%20AM.jpeg" />
+               </image>
+            </ImageView>
+            <Label prefHeight="17.0" prefWidth="184.0" text="Fish Supply Chain Management">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="28.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="180.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/material-symbols--home-rounded.png" />
+               </image>
+            </ImageView>
+            <Button mnemonicParsing="false" onAction="#btnHome" text="Home">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="28.0" fitWidth="42.0" layoutX="456.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <HBox.margin>
+                  <Insets left="30.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@../AdminMenu/ic--baseline-account-circle.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblAccount" prefHeight="21.0" prefWidth="133.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <Label prefHeight="30.0" prefWidth="187.0" text="Finance Dashboard">
+               <HBox.margin>
+                  <Insets left="30.0" top="10.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="57.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <HBox alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="747.0" style="-fx-background-color: white;">
+               <HBox.margin>
+                  <Insets left="9.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label text="Date Range : ">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpStartDate" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="128.0" promptText="Start" />
+                  <Label text="to">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="dpEndDate" layoutX="97.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="128.0" promptText="End">
+                     <HBox.margin>
+                        <Insets left="2.0" />
+                     </HBox.margin>
+                  </DatePicker>
+                  <Button mnemonicParsing="false" onAction="#btnApply" prefHeight="25.0" prefWidth="94.0" style="-fx-background-color: #2563EB; -fx-background-radius: 20;" text="Apply" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="147.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);">
+               <HBox.margin>
+                  <Insets left="120.0" top="10.0" />
+               </HBox.margin>
+               <children>
+                  <Label prefHeight="17.0" prefWidth="69.0" text="Total Sales">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalSales" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="110.0" style="-fx-border-color: black;">
+                     <VBox.margin>
+                        <Insets left="17.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox layoutX="130.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="147.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="89.0" text="Total Expenses">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalExpenses" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="110.0" style="-fx-border-color: black;">
+                     <VBox.margin>
+                        <Insets left="17.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox layoutX="317.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="81.0" prefWidth="147.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian,rgba(0,0,0,0.2),10,0,0,2);">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="75.0" text="Profit / Loss">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblProfitOrLoss" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="110.0" style="-fx-border-color: black;">
+                     <VBox.margin>
+                        <Insets left="17.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="msgProfitOrLoss" layoutX="27.0" layoutY="42.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="72.0" style="-fx-border-color: black;">
+                     <VBox.margin>
+                        <Insets left="40.0" top="4.0" />
+                     </VBox.margin>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="764.0" style="-fx-background-color: #82DBE5;">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="289.0" prefWidth="730.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="18.0" top="30.0" />
+               </VBox.margin>
+               <children>
+                  <Label prefHeight="21.0" prefWidth="141.0" text="Financial Summary">
+                     <VBox.margin>
+                        <Insets left="5.0" top="5.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblFinance" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="253.0" prefWidth="730.0">
+                    <columns>
+                      <TableColumn fx:id="colDate" prefWidth="146.0" text="Date" />
+                      <TableColumn fx:id="colDetails" prefWidth="146.0" text="Details" />
+                        <TableColumn fx:id="colTotalSales" prefWidth="145.0" text="Total Sales" />
+                        <TableColumn fx:id="colTotalExpenses" prefWidth="145.0" text="Total Expenses" />
+                        <TableColumn fx:id="colProfitOrLoss" prefWidth="146.0" text="Profit / Loss" />
+                    </columns>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </TableView>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
