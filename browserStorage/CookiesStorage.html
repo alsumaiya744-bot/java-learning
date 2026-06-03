@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookies Storage</title>
+</head>
+<body>
+    <h2>Cookies Storage Example</h2>
+    <button onclick="setTheme('light')">Light Theme</button>
+    <button onclick="setTheme('dark')">Dark Theme</button>
+    <script>
+        function setCookies(name,value,days)
+        {
+            let date=new Date();
+            date.setTime(date.getTime()+days*24*60*60*1000);
+            let expires="expires="+date.toUTCString();
+            document.cookie=name+"="+value+";"+expires+";path=/";
+        }
+        function getCookies(name)
+        {
+            let cookieName=name+"=";
+            let cookie=document.cookie.split(';');
+            for(let i=0;i<cookie.length;i++)
+            {
+                let c=cookie[i].trim();
+                if(c.indexOf(cookieName)==0)
+                {
+                    return c.substring(cookieName.length);
+                }
+            }
+            return "";
+        }
+        function setTheme(theme)
+        {
+            setCookies("theme",theme,7);
+            console.log(document.cookie);
+            applyTheme(theme);
+        }
+        function applyTheme(theme)
+        {
+            if(theme=="dark")
+            {
+                document.body.style.backgroundColor="black";
+                document.body.style.color="white";
+            }
+            else
+            {
+                document.body.style.backgroundColor="white";
+                document.body.style.color="black";
+            }
+        }
+        window.onload=function()
+        {
+            let theme=getCookies("theme");
+            if(theme)
+            {
+                applyTheme(theme);
+            }
+        }
+
+    </script>
+</body>
+</html>
